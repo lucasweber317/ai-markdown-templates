@@ -1,0 +1,126 @@
+# Release Brief: [YOUR_NEW_PRODUCT_NAME]
+
+<!-- T1 example. Replace all placeholders with your product details. -->
+
+---
+
+## Tier
+
+**T1 – Market-Level Launch**
+
+---
+
+## Target Release Date
+
+September 15, 2027
+
+---
+
+## Product Version
+
+1.0.0
+
+---
+
+## Release Owner
+
+Product Marketing Manager
+
+---
+
+## PMM Name
+
+TBD
+
+---
+
+## Release Summary
+
+### What Is Being Released
+
+New product: [YOUR_PRODUCT_NAME] - [ONE_SENTENCE_PRODUCT_DESCRIPTION].
+
+### Customer-Facing Scope
+
+- [KEY_FEATURE_1]
+- [KEY_FEATURE_2]
+- [KEY_FEATURE_3]
+- [KEY_FEATURE_4]
+- [KEY_FEATURE_5]
+- [ADDITIONAL_CUSTOMER_VISIBLE_CAPABILITIES]
+
+### Internal / Operational Scope (Release Notes Only)
+
+- [INFRASTRUCTURE_CHANGES]
+- [INTEGRATION_REQUIREMENTS]
+- [BACKEND_SYSTEM_CHANGES]
+- [OPERATIONAL_TOOLING_SETUP]
+
+---
+
+## Functional Boundaries
+
+### Out of Scope
+
+- [EXPLICITLY_EXCLUDED_FEATURE_1]
+- [EXPLICITLY_EXCLUDED_FEATURE_2]
+- [CAPABILITIES_DEFERRED_TO_FUTURE_RELEASES]
+
+### Known Constraints
+
+- [TECHNICAL_CONSTRAINT_1]
+- [TECHNICAL_CONSTRAINT_2]
+- [REGULATORY_OR_COMPLIANCE_LIMITATIONS]
+
+---
+
+## Affected Personas
+
+### Primary
+- [PRIMARY_PERSONA_1]
+- [PRIMARY_PERSONA_2]
+
+### Secondary
+- [SECONDARY_PERSONA_1]
+- [SECONDARY_PERSONA_2]
+
+---
+
+## Customer Impact
+
+- [CUSTOMER_PROBLEM_BEING_SOLVED]
+- [IMPLEMENTATION_REQUIREMENTS_AND_EFFORT]
+- [USER_EXPERIENCE_IMPACT]
+- [BUSINESS_IMPACT_DESCRIPTION]
+- [CUSTOMER_SUCCESS_REQUIREMENTS]
+
+---
+
+## Strategic Context
+
+- [MARKET_OPPORTUNITY_AND_TOTAL_ADDRESSABLE_MARKET]
+- [BRAND_OR_PORTFOLIO_STRATEGY_ALIGNMENT]
+- [COMPETITIVE_LANDSCAPE]
+- [EXECUTIVE_PRIORITY_LEVEL]
+- [EXTERNAL_STAKEHOLDER_CONSIDERATIONS]
+
+---
+
+## Cross-Functional Dependencies
+
+- Sales enablement: [SALES_ENABLEMENT_REQUIREMENTS]
+- Marketing: [MARKETING_CAMPAIGN_REQUIREMENTS]
+- Legal: [LEGAL_REVIEW_REQUIREMENTS]
+- Finance: [BILLING_OR_REVENUE_REQUIREMENTS]
+- Customer Success: [CS_LAUNCH_PLAN_REQUIREMENTS]
+- Support: [SUPPORT_READINESS_REQUIREMENTS]
+- [OTHER_TEAMS]: [THEIR_SPECIFIC_REQUIREMENTS]
+
+---
+
+## Rollout Model
+
+- Phased rollout: [ROLLOUT_PHASES]
+- Regional rollout: [REGIONAL_SEQUENCE_IF_APPLICABLE]
+- Feature flag controlled: [YES/NO] ([FEATURE_FLAG_DETAILS])
+- [OPT_IN_OR_MIGRATION_REQUIREMENTS]
