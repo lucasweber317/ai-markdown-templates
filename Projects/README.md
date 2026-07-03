@@ -3,13 +3,13 @@
 Part of the Tactical Product Management AI Workflow Suite  
 https://www.tacticalproductmanagement.com
 
-These are the same AI agents as the developer versions — rebuilt for everyday AI chat tools. No coding tools required.
+AI agents for product management work — battlecards, epics, customer-feedback syntheses, release notes, and more — built for the everyday AI chat tools you already use. No coding tools required.
 
 ---
 
-## How These Differ From the Developer Versions
+## Two Versions of Every Agent
 
-The original agents are folders of Markdown files designed for Claude Code and similar developer tools: they read context from disk, route between skill files, and write their own memory. If that sentence means nothing to you — these versions are for you.
+Every agent here also exists in a developer version (in the [main folder of this repository](https://github.com/lucasweber317/ai-markdown-templates)): folders of Markdown files designed for AI coding tools like Claude Code, which read context from disk, route between skill files, and write their own memory. If that sentence means nothing to you, ignore it — you're in the right place, and these versions do the same jobs without any of that.
 
 Each Project template is just **three files**:
 
