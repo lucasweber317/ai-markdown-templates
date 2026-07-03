@@ -26,9 +26,23 @@ Browse the repository folders to see individual READMEs with full details.
 
 | Agent | Purpose |
 |-------|---------|
+| [Discovery Synthesis Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Discovery-Synthesis-Agent) | Turn interview notes into evidence-based themes and comparisons |
+| [Voice of Customer Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Voice-of-Customer-Agent) | Synthesize multi-channel customer feedback into themed reports |
 | [Opportunity Assessment Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Opportunity-Assessment-Agent) | Evaluate opportunities before Epic definition |
 | [Epic Writing Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Epic-Writing-Agent) | Transform opportunities into structured product Epics |
+| [Epic Scoring Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Epic-Scoring-Agent) | Score and rank epics for quarterly planning |
 | [Product Release Tier Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Product-Release-Tier-Agent) | Classify and communicate product releases |
+| [Release Notes Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Release-Notes-Agent) | Turn release briefs into customer-facing release notes |
+| [Roadmap Communication Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Roadmap-Communication-Agent) | Adapt the roadmap for executives, sales, and customers |
+| [Sales Enablement Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Sales-Enablement-Agent) | Generate battlecards, talk tracks, and Discovery questions for launches |
+
+---
+
+## Not a Developer? Start Here
+
+The agents above are built for Claude Code and similar developer tools. The **[Projects](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Projects)** folder has the same agents rebuilt for everyday AI chat tools — anything that supports projects (a workspace with custom instructions and uploaded files).
+
+Each Project template is just three files: a 5-minute setup guide, an instructions document you paste in, and a product-context template you fill in and upload. See the [Projects README](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Projects) for setup.
 
 ---
 
