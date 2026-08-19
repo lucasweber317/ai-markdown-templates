@@ -1,0 +1,68 @@
+name: Issue Digest
+
+on:
+  schedule:
+    # Daily at 07:00 UTC — adjust to taste. GitHub Actions cron can lag by several
+    # minutes under load; don't rely on this for anything time-sensitive.
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+    inputs:
+      write_mode:
+        description: 'Allow the agent to comment/label likely duplicates (default: read-only digest only)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write   # only exercised when write_mode is true
+
+concurrency:
+  group: issue-digest
+  cancel-in-progress: false   # never cancel a mid-flight run — it could leave memory/ half-updated
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Fetch issues since last run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/fetch-issues.sh > issues.json
+
+      - name: Run issue-triage skill
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          WRITE_MODE: ${{ github.event.inputs.write_mode || 'false' }}
+        run: |
+          claude -p "Follow the issue-triage skill defined in .claude/skills/issue-triage.md exactly. \
+          The fetched issues for this run are in issues.json at the repo root. \
+          WRITE_MODE is currently: $WRITE_MODE. \
+          Update memory/last-run.md and memory/known-issues.md, and write today's digest to digests/. \
+          If WRITE_MODE is true, also write proposed-actions.json at the repo root with any proposed \
+          duplicate-link comments/labels — do not call any GitHub write API yourself, a separate script does that." \
+          --output-format text
+
+      - name: Apply proposed actions (write mode only)
+        if: ${{ github.event.inputs.write_mode == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/apply-actions.sh proposed-actions.json
+
+      - name: Commit updated state
+        run: |
+          git config user.name "issue-triage-loop-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add memory/ digests/
+          git diff --cached --quiet || git commit -m "Issue digest: $(date -u +%Y-%m-%d)"
+          git push

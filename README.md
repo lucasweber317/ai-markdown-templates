@@ -35,6 +35,7 @@ Browse the repository folders to see individual READMEs with full details.
 | [Release Notes Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Release-Notes-Agent) | Turn release briefs into customer-facing release notes |
 | [Roadmap Communication Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Roadmap-Communication-Agent) | Adapt the roadmap for executives, sales, and customers |
 | [Sales Enablement Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Sales-Enablement-Agent) | Generate battlecards, talk tracks, and Discovery questions for launches |
+| [Issue Triage Loop Agent](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Issue-Triage-Loop-Agent) | Watch a GitHub repo's issues on a schedule and produce a standing triage digest (runs as a loop, not one-shot) |
 
 ---
 
