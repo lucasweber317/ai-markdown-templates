@@ -37,7 +37,10 @@ It's also a different kind of template than the rest of this suite. The other ag
 2. Open the `Issue-Triage-Loop-Agent` folder in Claude Code.
 3. Edit `context/repo.md` — set the repo it should watch and confirm the classification taxonomy and urgency definition fit your tracker.
 4. Set `memory/last-run.md`'s cursor to a start-of-time date so the first digest covers everything currently open.
-5. Add an `ANTHROPIC_API_KEY` (or `CLAUDE_CODE_OAUTH_TOKEN`) repo secret in your fork's GitHub settings.
+5. Add an `ANTHROPIC_API_KEY` repo secret:
+   - Get a key from [console.anthropic.com](https://console.anthropic.com/settings/keys) (or use a `CLAUDE_CODE_OAUTH_TOKEN` instead if you already have one from `claude setup-token`).
+   - In your repo on GitHub: **Settings → Secrets and variables → Actions → Secrets tab → New repository secret**.
+   - Name: `ANTHROPIC_API_KEY`. Value: paste the key. Click **Add secret**.
 6. Run the workflow once manually (`workflow_dispatch`, `write_mode: false`) before ever enabling the schedule — see [Testing before you enable the schedule](#testing-before-you-enable-the-schedule).
 
 ---
@@ -48,9 +51,13 @@ Don't point this at a live repo and turn on the cron trigger first. Test it in o
 
 1. **Seed a small sandbox repo** with a few issues designed to exercise every path: two worded differently but describing the same bug (to test dedupe), one that reads as urgent by the definition in `context/repo.md`, a plain feature request, a question, a routine minor bug, and one already-closed issue (it should be excluded from the digest but still usable for dedupe comparison).
 2. **Run the skill manually** inside a Claude Code chat against a fetched sample first, before any automation exists — sanity-check the classifications and duplicate calls.
-3. **Trigger the workflow by hand** (`workflow_dispatch`) with `write_mode: false`. Read the resulting commit and digest.
-4. **If you want write mode**, trigger it again with `write_mode: true` against the sandbox repo only, and check the actual comment/label it posts before trusting it anywhere real.
-5. **Only then** rely on the `schedule:` cron trigger.
+3. **Trigger the workflow by hand** with `write_mode: false`, either way:
+   - **GitHub UI:** go to the repo's **Actions** tab → click **Issue Digest** in the left sidebar → click the **Run workflow** dropdown (top right) → leave `write_mode` unchecked → click **Run workflow**.
+   - **CLI:** `gh workflow run issue-digest.yml --repo <owner>/<repo> -f write_mode=false`
+   
+   Either way, wait ~1–2 minutes, then open the run to check it succeeded, and check the repo for a new commit adding a file under `digests/` and updating `memory/last-run.md`'s cursor and run log.
+4. **If you want write mode**, trigger it again the same way with `write_mode: true` (check the box in the UI, or `-f write_mode=true` on the CLI) against the sandbox repo only, and check the actual comment/label it posts on the duplicate issues before trusting it anywhere real.
+5. **Only then** rely on the `schedule:` cron trigger — it needs no further setup, it's already in the workflow file and will start firing daily once you stop manually testing.
 
 ---
 
