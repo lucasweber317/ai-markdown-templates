@@ -47,6 +47,12 @@ Each Project template is just three files: a 5-minute setup guide, an instructio
 
 ---
 
+## Just Want a Skill?
+
+The **[Skills](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Skills)** folder has standalone `/command` skills for Claude Code and Cursor — `SKILL.md` plus optional templates, no full agent workspace. Download a zip, drop it in your skills directory, run `/skill-name`. See the [Skills README](https://github.com/lucasweber317/ai-markdown-templates/tree/main/Skills) for the list.
+
+---
+
 ## How to Use
 
 1. Browse the repository folders to explore agents and their READMEs
