@@ -17,7 +17,6 @@ Download a `.zip`, unzip into your Claude Code or Cursor skills directory, then 
 | [release-notes](./release-notes/) | [zip](./release-notes.zip) | Turn a release brief into clear, customer-facing release notes (no hype). |
 | [roadmap-comms](./roadmap-comms/) | [zip](./roadmap-comms.zip) | Rewrite your roadmap for executives, sales, or customers. |
 | [battlecard](./battlecard/) | [zip](./battlecard.zip) | One-page internal sales battlecard: positioning, objections, proof, competitive frame. |
-| [discovery-questions](./discovery-questions/) | [zip](./discovery-questions.zip) | Qualifying questions a rep can use on a live call, with answer cues and red flags. |
 | [discovery-synthesis](./discovery-synthesis/) | [zip](./discovery-synthesis.zip) | Turn interview notes into evidence-backed themes and comparisons. |
 | [voc](./voc/) | [zip](./voc.zip) | Synthesize multi-channel customer feedback into themed Voice-of-Customer reports. |
 
